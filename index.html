@@ -38,11 +38,24 @@
             </li>
             <li class="nav-list__item"><a href="" class="nav-list__link">Контакти</a></li>
           </ul>
+
+          <!-- toggle-mobile menu -->
+          <div class="wrapper-mobile">
+            <button
+              class="menu-toggle js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
         </nav>
         <ul class="contact-nav list">
           <li class="contact-nav__item">
             <a href="mailto:info@devstudio.com" class="contact-nav__link">
-              <svg class="mail-icon">
+              <svg class="contact-nav-icon" width="14" height="10">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
@@ -50,7 +63,7 @@
           </li>
           <li class="contact-nav__item">
             <a href="tel:+380961111111" class="contact-nav__link">
-              <svg class="phone-icon">
+              <svg class="contact-nav-icon" width="10" height="14">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -413,7 +426,7 @@
           </address>
         </div>
 
-        <div>
+        <div class="social-container">
           <p class="social-description">приєднуйтесь</p>
 
           <ul class="social-list list">
@@ -523,7 +536,7 @@
                   <use href="./images/icons.svg#icon-tick"></use>
                 </svg>
               </span>
-              Погоджуюся з розсилкою та приймаю
+              <span class="form__label__description">Погоджуюся з розсилкою та приймаю</span>
               <span class="accept-line accept__span">
                 <a href="" class="accept__link">Умови договору</a></span
               >
@@ -539,6 +552,58 @@
         </button>
       </div>
     </div>
+
+        <!-- mobile button-menu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40"><use href="./images/icons.svg#icon-cross"></use></svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__link mobile-menu__link--color">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакти</a></li>
+      </ul>
+
+      <ul class="contact-nav contact-nav__mobile list">
+        <li class="contact-nav__item">
+          <a href="tel:+380961111111" class="contact-nav__link contact-nav__link--padding">
+            +38 096 111 11 11</a
+          >
+        </li>
+        <li class="contact-nav__item">
+          <a
+            href="mailto:info@devstudio.com"
+            class="contact-nav__link contact-nav__link--color contact-nav__link--padding"
+          >
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-social list">
+        <li class="mobile-social__item">
+          <a href="https://www.instagram.com/" class="mobile-social__links">Instagram </a>
+        </li>
+        <li class="mobile-social__item">
+          <a href="https://twitter.com/" class="mobile-social__links"> Twitter </a>
+        </li>
+        <li class="mobile-social__item">
+          <a href="https://www.facebook.com/" class="mobile-social__links"> Facebook </a>
+        </li>
+        <li class="mobile-social__item">
+          <a href="https://www.linkedin.com/" class="mobile-social__links"> LinkedIn </a>
+        </li>
+      </ul>
+    </div>
+
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
