@@ -1,5 +1,8 @@
 .portfolio-section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include tablet {
+    padding: 94px 0;
+  }
 }
 
 .button-filter {
@@ -28,36 +31,62 @@
 
 .list-btn {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
   padding: 0;
+
+  @include tablet {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .list-btn .item + .item {
-  margin-left: 9px;
+  @include tablet {
+    margin-left: 9px;
+  }
 }
-*/
 
 /* work-list */
 
-/*.work-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  gap: 30px;
-
+.work-list {
   padding: 0;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .work-list .work-item {
   background: var(--primary-background-color);
-
-  flex-basis: calc((100% - 60px) / 3);
+  @include tablet {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
-*/
+
+.work-list .work-item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
 
 /* work-card */
 
-/*.work-wrap-details {
+.work-wrap-details {
   position: relative;
   overflow: hidden;
 }
@@ -86,7 +115,15 @@
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  padding: 20px 24px 20px 24px;
+  padding: 20px 24px;
+
+  @include tablet {
+    flex-grow: 1;
+  }
+
+  @include desktop {
+    flex-grow: 0;
+  }
 }
 
 //portfolio-title//
@@ -117,6 +154,16 @@
   &:hover {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
       0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  @include desktop {
+    display: block;
   }
 }
 
