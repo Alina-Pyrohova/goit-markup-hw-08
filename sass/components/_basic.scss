@@ -3,9 +3,9 @@
   padding-bottom: 60px;
 
   @include desktop {
-      padding-top: 94px;
-      padding-bottom: 94px;
-    }
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .container {
@@ -15,25 +15,25 @@
   padding-right: 15px;
 
   @include mobile {
-      min-width: 480px;
-      margin: 0 auto;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  
-    @include tablet {
-      min-width: 768px;
-      margin: 0 auto;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  
-    @include desktop {
-      width: 1200px;
-      margin: 0 auto;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+    min-width: 480px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include tablet {
+    min-width: 768px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include desktop {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .no-scroll {
@@ -82,9 +82,7 @@ body {
   margin-bottom: 50px;
 
   @include desktop {
-      font-size: 36px;
-      line-height: 1.16;
-    }
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
-
-

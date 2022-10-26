@@ -1,7 +1,7 @@
 .section-footer {
   background-color: var(--secondary-background-studio);
-padding: 60px 0;
-margin: 0 auto;
+  padding: 60px 0;
+  margin: 0 auto;
   text-align: center;
 
   @include desktop {
@@ -12,25 +12,25 @@ margin: 0 auto;
 .footer-wrapper {
   align-items: baseline;
   @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  
-    @include desktop {
-      flex-wrap: nowrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
 .address-wrapper {
   margin-bottom: 60px;
-  
-    @include tablet {
-      margin: 0 165px 60px 76px;
-    }
-  
-    @include desktop {
-      margin: 0 70px 0 0;
-    }
+
+  @include tablet {
+    margin: 0 165px 60px 76px;
   }
+
+  @include desktop {
+    margin: 0 70px 0 0;
+  }
+}
 .section-footer__logo {
   display: block;
   margin-right: 0;
@@ -90,20 +90,19 @@ margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
 }
 
-
 //footer form//
 
 .form-subscribe {
   margin-left: auto;
 
   @include tablet {
-      margin: 0 auto;
-    }
-  
-    @include desktop {
-      margin: 0;
-      margin-left: auto;
-    }
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .form-subscribe__container {
@@ -147,7 +146,6 @@ margin: 0 auto;
     margin-right: 12px;
   }
 }
-
 
 //footer button
 

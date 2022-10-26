@@ -47,10 +47,10 @@
     display: flex;
   }
 
-    @include max-tablet {
-      align-items: center;
-      justify-content: space-between;
-    }
+  @include max-tablet {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 // mobile menu
@@ -160,11 +160,10 @@
 }
 
 .nav-list .current {
- color: var(--accent-text-color); 
+  color: var(--accent-text-color);
 }
 
 .current {
-  
   @include tablet {
     position: relative;
 
