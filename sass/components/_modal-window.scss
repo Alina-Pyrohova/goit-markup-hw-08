@@ -1,4 +1,4 @@
-/*.backdrop {
+.backdrop {
   position: fixed;
   left: 0;
   top: 0;
@@ -20,8 +20,8 @@
 }
 
 .modal {
-  min-width: 528px;
-  min-height: 581px;
+min-width: 290px;
+  min-height: 609px;
   background: var(--primary-background-color);
   position: absolute;
   left: 50%;
@@ -31,92 +31,101 @@
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   padding: 40px 40px;
-}
-*/
 
-/*modal button*/
+@include mobile {
+    min-width: 450px;
+    max-height: 609px;
+  }
 
-/*.modal-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include desktop {
+    min-width: 528px;
+    min-height: 581px;
+  }
 
-  width: 30px;
-  height: 30px;
+  }
 
-  background: var(--primary-background-color);
-  border: none;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  cursor: pointer;
-
-  transition: fill 250ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-button:hover,
-.modal-button:focus svg {
-  fill: var(--accent-text-color);
-}
-
-.icon-modal {
-  height: 100%;
-}
-
-.modal-title {
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  margin-bottom: 12px;
-}
-*/
-
-/*modal form*/
-
-/*.form__label {
-  display: block;
-}
-
-.form-wrap {
-  position: relative;
-  margin-bottom: 10px;
-
-  &__svg {
+  /*modal button*/
+  
+  .modal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 30px;
+    height: 30px;
+  
+    background: var(--primary-background-color);
+    border: none;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  
     position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 8px;
+    right: 8px;
+  
+    cursor: pointer;
+  
+    transition: fill 250ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &__name {
-    width: 12px;
-    height: 12px;
+  .modal-button:hover,
+  .modal-button:focus svg {
+    fill: var(--accent-text-color);
+  }
+  
+  .icon-modal {
+    height: 100%;
+  }
+  
+  .modal-title {
+    color: var(--title-text-color);
+  
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+    margin-bottom: 12px;
   }
 
-  &__telephone {
-    width: 13px;
-    height: 13px;
+  /*modal form*/
+  
+  .form__label {
+  display: block;
   }
 
-  &__email {
-    width: 15px;
-    height: 12px;
+  .form-wrap {
+    position: relative;
+    margin-bottom: 10px;
+  
+    &__svg {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+  
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    &__name {
+      width: 12px;
+      height: 12px;
+    }
+  
+    &__telephone {
+      width: 13px;
+      height: 13px;
+    }
+  
+    &__email {
+      width: 15px;
+      height: 12px;
+    }
   }
-}
 
 .form__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   padding: 0 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -128,16 +137,24 @@
   &:focus {
     border: 1px solid var(--accent-text-color);
   }
+
+  @include mobile {
+    width: 370px;
+  }
+
+  @include desktop {
+    width: 448px;
+  }
 }
 
-.form__input:focus + .form-wrap__svg {
+.form__input:focus+.form-wrap__svg {
   fill: var(--accent-text-color);
 }
 
 .form__textarea {
   padding: 12px 16px;
   margin-bottom: 10px;
-  width: 448px;
+  width: 100%;
   height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -152,6 +169,15 @@
 
   &:focus {
     border: 1px solid var(--accent-text-color);
+  }
+
+  @include mobile {
+    width: 370px;
+    height: 120px;
+  }
+
+  @include desktop {
+    width: 448px;
   }
 }
 
@@ -169,12 +195,32 @@
 }
 
 .accept__span {
+  font-size: 12px;
+  line-height: 1.16;
+
   margin-left: 8px;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+
+    display: flex;
+  }
 }
 
 .accept__label {
   display: flex;
   align-items: center;
+}
+
+.form__label__description {
+  font-size: 12px;
+  line-height: 1.16;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .accept__input:checked + .accept__label .accept__checkbox {
@@ -201,6 +247,7 @@
   height: 8px;
 }
 
+
 .accept-line {
   position: relative;
 
@@ -210,8 +257,20 @@
     content: '';
     width: 100%;
     height: 1px;
-    top: 17px;
+    top: 25px;
     background: var(--accent-text-color);
+
+    @include mobile {
+      top: 11px;
+    }
+
+    @include tablet {
+      top: 11px;
+    }
+
+    @include desktop {
+      top: 17px;
+    }
   }
 }
 
@@ -219,4 +278,3 @@
   margin: 0 auto;
   display: block;
 }
-*/

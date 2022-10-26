@@ -1,19 +1,36 @@
-/*.section-footer {
+.section-footer {
   background-color: var(--secondary-background-studio);
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: start;
+padding: 60px 0;
+margin: 0 auto;
+  text-align: center;
+
+  @include desktop {
+    text-align: start;
+  }
 }
 
 .footer-wrapper {
-  display: flex;
   align-items: baseline;
-}
-
+  @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+  }
 .address-wrapper {
-  margin-right: 70px;
-}
-
+  margin-bottom: 60px;
+  
+    @include tablet {
+      margin: 0 165px 60px 76px;
+    }
+  
+    @include desktop {
+      margin: 0 70px 0 0;
+    }
+  }
 .section-footer__logo {
   display: block;
   margin-right: 0;
@@ -58,6 +75,12 @@
   margin-bottom: 20px;
 }
 
+.social-container {
+  @include max-mobile {
+    margin-bottom: 60px;
+  }
+}
+
 .icon-socials {
   fill: var(--primary-background-color);
 }
@@ -67,20 +90,34 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+
 //footer form//
 
 .form-subscribe {
   margin-left: auto;
+
+  @include tablet {
+      margin: 0 auto;
+    }
+  
+    @include desktop {
+      margin: 0;
+      margin-left: auto;
+    }
 }
 
 .form-subscribe__container {
-  display: flex;
+  @include desktop {
+    display: flex;
+  }
 }
 
 .form-subscribe__input {
-  width: 358px;
-  margin-right: 12px;
+  min-width: 290px;
+  min-height: 50px;
+
   padding: 0 15px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -99,14 +136,26 @@
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @include mobile {
+    min-width: 450px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    min-width: 358px;
+    margin-right: 12px;
+  }
 }
 
-//footer button//
+
+//footer button
 
 .button-subscribe {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 
   min-width: 200px;
   padding: 10px 28px;
@@ -116,5 +165,8 @@
     width: 20px;
     height: 20px;
   }
+
+  @include desktop {
+    margin: 0;
+  }
 }
-*/

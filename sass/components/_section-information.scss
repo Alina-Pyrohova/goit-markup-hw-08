@@ -1,5 +1,10 @@
-/*.section-information {
+.section-information {
+  display: none;
   padding-top: 0;
+
+  @include desktop {
+      display: block;
+    }
 }
 
 .list-img__img {
@@ -41,4 +46,3 @@
   color: var(--primary-background-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
-*/
